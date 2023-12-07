@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/sidenav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sidenav"
+    app:startDestination="@id/homeFragment">
 
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.barangay20.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.barangay20.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/officialFragment"
+        android:name="com.example.barangay20.OfficialFragment"
+        android:label="fragment_official"
+        tools:layout="@layout/fragment_official" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.barangay20.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
 </navigation>
