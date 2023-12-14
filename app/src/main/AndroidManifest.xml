@@ -16,10 +16,10 @@
         android:theme="@style/Theme.splashscreen"
         tools:targetApi="31">
         <activity
-            android:name=".RequestActivity"
+            android:name=".RequestFragment"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".splashscreen"
@@ -28,7 +28,7 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

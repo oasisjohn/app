@@ -10,8 +10,8 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginStart="10dp"
         android:layout_marginBottom="5dp"
         android:src="@drawable/user" />
@@ -19,13 +19,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ARABELLA BELARDO"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
+        android:text="ARABELLA BELARDO"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
 
 </LinearLayout>

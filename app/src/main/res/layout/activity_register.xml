@@ -1,120 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
     android:background="@drawable/backg"
     tools:context=".RegisterActivity">
 
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:src="@drawable/logo1"
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="200dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="122dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo1" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="20dp"
-        android:text="MAGING KONEKTADO"
-        android:textColor="@color/white"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="33dp"
+        android:fontFamily="@font/graduate"
+        android:text="TARA AT MAG-REHISTRO"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/tauri"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="TO STAY INFORMED ABOUT LOCAL NEWS, OBTAIN NECESSARY IDENTIFICATION AND CERTIFICATES, KINDLY REGISTER YOUR INFORMATION "
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/clickhere"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="150dp"
+        android:gravity="center"
+        android:text="CLICK HERE"
+        android:textColor="@color/blue4"
         android:textSize="20sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="5dp"
-        app:startIconDrawable="@drawable/baseline_person_24">
-
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/text_input_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Username"
-        android:inputType="textPersonName"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout_fullname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="5dp"
-        app:startIconDrawable="@drawable/baseline_person_outline_24">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/text_input_fullname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Fullname"
-            android:inputType="textPersonName"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="5dp"
-        app:startIconDrawable="@drawable/baseline_email_24">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/text_input_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="5dp"
-        app:startIconDrawable="@drawable/baseline_lock_24">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/text_input_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"/>
-
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn_signup"
+    <ImageView
+        android:id="@+id/imageView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Signup"/>
+        android:layout_marginTop="205dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bgsignup" />
 
-
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

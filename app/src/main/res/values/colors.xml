@@ -5,7 +5,12 @@
     <color name="blue">#7ab3ef</color>
     <color name="blue1">#5899DD</color>
     <color name="blue2">#70AED3</color>
+    <color name="blue3">#78FBFF</color>
+    <color name="blue4">#0F4585</color>
     <color name="black">#000000</color>
     <color name="red">#F44336</color>
+
+
+
 
 </resources>

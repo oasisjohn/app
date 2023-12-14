@@ -1,5 +1,6 @@
 package com.example.barangay20
 
+import android.annotation.SuppressLint
 import android.app.DownloadManager
 import android.content.Intent
 import android.os.Bundle
@@ -21,6 +22,7 @@ import org.json.JSONObject
 class LoginActivity : AppCompatActivity() {
     lateinit var username: EditText
     lateinit var password: EditText
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -32,8 +34,6 @@ class LoginActivity : AppCompatActivity() {
         signupBtn.setOnClickListener {
           val registerIntent =  Intent(this, RegisterActivity::class.java)
             startActivity(registerIntent)
-            Toast.makeText(this, "conag baliw", Toast.LENGTH_LONG).show()
-
         }
         loginBtn.setOnClickListener{
 
