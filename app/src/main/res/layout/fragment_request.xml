@@ -99,7 +99,7 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentRight="true"
                     android:gravity="center"
-                    android:text="Barangay Certification"
+                    android:text="Barangay Clearance"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -121,6 +121,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/textBrgyCoi"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentRight="true"
@@ -147,6 +148,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/textBusiness"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentRight="true"

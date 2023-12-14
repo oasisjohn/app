@@ -22,6 +22,8 @@ class RequestFragment : Fragment() {
         val brgyidbutton = view.findViewById<TextView>(R.id.textBrgyId)
         val cor = view.findViewById<TextView>(R.id.textBrgycor)
         val certif = view.findViewById<TextView>(R.id.textCertif)
+        val coi = view.findViewById<TextView>(R.id.textBrgyCoi)
+        val business = view.findViewById<TextView>(R.id.textBusiness)
 
         brgyidbutton.setOnClickListener {
             val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
@@ -40,6 +42,20 @@ class RequestFragment : Fragment() {
         certif.setOnClickListener {
             val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.fragment_container, Certif_ScrollingFragment())
+            fragmentTransaction.addToBackStack(null)  // Optional: Add to back stack if you want to navigate back
+            fragmentTransaction.commit()
+        }
+
+        coi.setOnClickListener {
+            val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fragment_container, CoiScrollingFragment())
+            fragmentTransaction.addToBackStack(null)  // Optional: Add to back stack if you want to navigate back
+            fragmentTransaction.commit()
+        }
+
+        business.setOnClickListener {
+            val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fragment_container, BusinessScrollingFragment())
             fragmentTransaction.addToBackStack(null)  // Optional: Add to back stack if you want to navigate back
             fragmentTransaction.commit()
         }

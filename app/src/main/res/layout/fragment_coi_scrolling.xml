@@ -9,7 +9,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Barangayid_ScrollingFragment">
+    tools:context=".CoiScrollingFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -28,9 +28,10 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            tools:ignore="ExtraText">
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="200dp"
@@ -45,14 +46,14 @@
                 android:layout_marginBottom="19dp"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
-                android:text="Barangay ID Request"
+                android:text="Certificate of Indigency"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#43B1FB"
                 android:textSize="30sp" />
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdName"
+                android:id="@+id/coiname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -62,7 +63,7 @@
                 app:startIconDrawable="@drawable/baseline_person_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdName"
+                    android:id="@+id/textCoiName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Name"
@@ -71,7 +72,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdAddress"
+                android:id="@+id/coiaddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -81,7 +82,7 @@
                 app:startIconDrawable="@drawable/location">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdAddress"
+                    android:id="@+id/textCoiAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Address" />
@@ -89,43 +90,26 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdbirthday"
+                android:id="@+id/coiresidency"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/cake">
+                app:startIconDrawable="@drawable/yrsres">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdBirthday"
+                    android:id="@+id/textCoiRes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Birthday" />
+                    android:hint="Years of Residency" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdStatus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/status">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdStatus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Civil Status" />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdContact"
+                android:id="@+id/coicontact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -135,7 +119,7 @@
                 app:startIconDrawable="@drawable/phone">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdContact"
+                    android:id="@+id/CoiContact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Contact No." />
@@ -143,116 +127,55 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdPrecinct"
+                android:id="@+id/coipurpose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/precinct">
+                app:startIconDrawable="@drawable/purpose">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdPrecinct"
+                    android:id="@+id/textCoiPurpose"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Precinct No." />
+                    android:inputType="textMultiLine"
+                    android:hint="Purpose" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdSss"
+                android:id="@+id/coirequest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/card">
+                app:startIconDrawable="@drawable/request">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdSss"
+                    android:id="@+id/textCoiRequest"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="GSIS/SSS No." />
+                    android:hint="Request by" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdtin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/tin">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdTin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Tin No." />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:text="In Case of Emergency"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdemgname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/baseline_person_24">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdEmgName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Name" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdemgcontact"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/phone">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdEmgContact"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Contact No." />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/login"
+                android:id="@+id/submit"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
                 android:background="@color/blue3"
                 android:text="Submit" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.cardview.widget.CardView>
+
 </androidx.core.widget.NestedScrollView>

@@ -45,7 +45,7 @@
                 android:layout_marginBottom="19dp"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
-                android:text="Barangay Certification"
+                android:text="Barangay Clearance"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#43B1FB"
                 android:textSize="30sp" />
@@ -133,13 +133,31 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/precinct">
+                app:startIconDrawable="@drawable/purpose">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textcertisPurpose"
+                    android:id="@+id/textcertiPurpose"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Purpose" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/certirequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="5dp"
+                app:startIconDrawable="@drawable/request">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textCertiRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Request by" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -152,6 +170,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
                 android:background="@color/blue3"
+                android:inputType="textMultiLine"
                 android:text="Submit" />
 
 

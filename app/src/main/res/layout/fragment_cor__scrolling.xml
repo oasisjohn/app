@@ -134,13 +134,32 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/precinct">
+                app:startIconDrawable="@drawable/purpose">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textCorPurpose"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
                     android:hint="Purpose" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/correquest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="5dp"
+                app:startIconDrawable="@drawable/request">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textCorRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Request" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -153,7 +172,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="15dp"
                 android:background="@color/blue3"
-                android:text="Submit" />s
+                android:text="Submit" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
