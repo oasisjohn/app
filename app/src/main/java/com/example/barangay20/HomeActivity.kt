@@ -56,11 +56,15 @@ class HomeActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_announce ->{
                 replaceFragment(announcement())
             }
+            R.id.nav_requestlogs ->{
+                replaceFragment(logrequest_ScrollingFragment())
+            }
             R.id.nav_logout ->{
                 // Implement logout functionality
 
                 val logout =  Intent(this, LoginActivity::class.java)
                 startActivity(logout)
+                finish()
 
             }
 

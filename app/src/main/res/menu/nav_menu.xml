@@ -30,6 +30,10 @@
             android:id="@+id/nav_announce"
             android:icon="@drawable/announcement"
             android:title="Annoucement"/>
+        <item
+            android:id="@+id/nav_requestlogs"
+            android:icon="@drawable/request1"
+            android:title="Request"/>
 
     </group>
 
@@ -37,10 +41,7 @@
     <item
         android:title="">
         <menu>
-            <item
-                android:id="@+id/nav_request"
-                android:icon="@drawable/request1"
-                android:title="Request"/>
+
 
 
             <item

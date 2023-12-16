@@ -118,7 +118,7 @@
                 app:startIconDrawable="@drawable/phone">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/certiContact"
+                    android:id="@+id/textcertiContact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Contact No." />
@@ -144,7 +144,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/certirequest"
+                android:id="@+id/certifrequest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -157,7 +157,7 @@
                     android:id="@+id/textCertiRequest"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Request by" />
+                    android:hint="Request: " />
 
             </com.google.android.material.textfield.TextInputLayout>
 

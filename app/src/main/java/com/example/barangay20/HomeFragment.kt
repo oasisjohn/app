@@ -19,6 +19,8 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val request = view.findViewById<TextView>(R.id.request)
+        val announcement = view.findViewById<TextView>(R.id.announcement)
+        val assistant = view.findViewById<TextView>(R.id.assistant)
         // Now you can find your ImageView within the inflated view
         val profile = view.findViewById<ImageView>(R.id.user)
         profile.setOnClickListener{
@@ -36,12 +38,23 @@ class HomeFragment : Fragment() {
             fragmentTransaction.replace(R.id.fragment_container, RequestFragment())
             fragmentTransaction.addToBackStack(null)  // Optional: Add to back stack if you want to navigate back
             fragmentTransaction.commit()
+
         }
+        announcement.setOnClickListener {
+            val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fragment_container, announcement())
+            fragmentTransaction.addToBackStack(null)  // Optional: Add to back stack if you want to navigate back
+            fragmentTransaction.commit()
 
+        }
+        assistant.setOnClickListener {
+            val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fragment_container, assistant_ScrollingFragment())
+            fragmentTransaction.addToBackStack(null)  // Optional: Add to back stack if you want to navigate back
+            fragmentTransaction.commit()
+
+        }
         // Do something with the 'profile' ImageV iew if needed
-
-
-
         return view
     }
 

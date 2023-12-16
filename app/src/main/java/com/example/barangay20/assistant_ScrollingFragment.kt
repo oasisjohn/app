@@ -20,7 +20,7 @@ import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-class Barangayid_ScrollingFragment : Fragment() {
+class assistant_ScrollingFragment: Fragment() {
     private fun showSuccessAlertDialog() {
         val alertDialogBuilder = AlertDialog.Builder(requireContext())
 
@@ -107,7 +107,7 @@ class Barangayid_ScrollingFragment : Fragment() {
                     if (status) {
                         Toast.makeText(requireContext(), "Success: $message", Toast.LENGTH_SHORT).show()
 
-                        // Show the success AlertDialog
+                        // Show the success AslertDialog
                         showSuccessAlertDialog()
 
                     } else {

@@ -34,4 +34,9 @@
         android:name="com.example.barangay20.request"
         android:label="fragment_request"
         tools:layout="@layout/fragment_request" />
+    <fragment
+        android:id="@+id/logrequest_ScrollingFragment"
+        android:name="com.example.barangay20.logrequest_ScrollingFragment"
+        android:label="fragment_logrequest__scrolling"
+        tools:layout="@layout/fragment_logrequest__scrolling" />
 </navigation>

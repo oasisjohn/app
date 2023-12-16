@@ -64,16 +64,16 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="101dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="113dp"
-                android:layout_marginBottom="19dp"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="81dp"
+                android:layout_marginBottom="20dp"
                 android:fontFamily="sans-serif-black"
                 android:gravity="center"
                 android:text="DASHBOARD"
@@ -139,7 +139,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="25dp"
                     android:layout_marginBottom="27dp"
-                    android:src="@drawable/request2" />
+                    android:src="@drawable/request" />
 
                 <TextView
                     android:id="@+id/request"
@@ -181,6 +181,7 @@
 
 
                 <TextView
+                    android:id="@+id/assistant"
                     android:layout_width="220dp"
                     android:layout_height="300dp"
                     android:layout_alignParentRight="true"
@@ -218,6 +219,7 @@
                     android:src="@drawable/announcement1" />
 
                 <TextView
+                    android:id="@+id/announcement"
                     android:layout_width="220dp"
                     android:layout_height="300dp"
                     android:layout_alignParentRight="true"
