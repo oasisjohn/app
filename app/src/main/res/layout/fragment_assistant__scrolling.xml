@@ -5,12 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backg"
+    android:background="@color/back"
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".assistant_ScrollingFragment">
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,41 +27,42 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="10dp">
-
+            android:padding="10dp"
+            tools:ignore="ExtraText">
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginEnd="50dp"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="sans-serif-black"
+                android:layout_marginBottom="19dp"
+                android:fontFamily="@font/graduate"
                 android:gravity="center"
-                android:text="Barangay Assistant"
+                android:text="BARANGAY ASSISTANCE"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#43B1FB"
                 android:textSize="30sp" />
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdName"
+                android:id="@+id/assistname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
                 app:startIconDrawable="@drawable/baseline_person_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdName"
+                    android:id="@+id/textAssistName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Name"
@@ -71,61 +71,26 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdAddress"
+                android:id="@+id/assistaddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/location">
+                app:startIconDrawable="@drawable/location">s
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdAddress"
+                    android:id="@+id/textAssistAddress"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Address" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdbirthday"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/cake">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdBirthday"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Birthday" />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdStatus"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/status">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdStatus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Civil Status" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdContact"
+                android:id="@+id/assistcontact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -135,7 +100,7 @@
                 app:startIconDrawable="@drawable/phone">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdContact"
+                    android:id="@+id/AssistContact"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Contact No." />
@@ -143,113 +108,50 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdPrecinct"
+                android:id="@+id/assistpurpose"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/precinct">
+                app:startIconDrawable="@drawable/purpose">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdPrecinct"
+                    android:id="@+id/textAssistPurpose"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Precinct No." />
+                    android:inputType="textMultiLine"
+                    android:hint="Purpose" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdSss"
+                android:id="@+id/assistrequest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/card">
+                app:startIconDrawable="@drawable/request2">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdSss"
+                    android:id="@+id/textAssistRequest"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="GSIS/SSS No." />
+                    android:hint="Request" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdtin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/tin">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdTin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Tin No." />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
-                android:text="In Case of Emergency"
-                android:textColor="@color/black"
-                android:textSize="15sp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdemgname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/baseline_person_24">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdEmgName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Name" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/brgyIdemgcontact"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="25dp"
-                android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/phone">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textBrgyIdEmgContact"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Contact No." />
-
-            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/submitbrgyid"
+                android:id="@+id/submit"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="15dp"
                 android:background="@color/blue3"
                 android:text="Submit" />
 

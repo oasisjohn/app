@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backg"
+    android:background="@color/back"
     tools:context=".announcement">
 
 
@@ -113,16 +113,12 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         tools:ignore="MissingConstraints">
 
-        <ScrollView
-            android:id="@+id/scroll"
+        <ListView
+            android:id="@+id/list_announcement"
             android:layout_width="match_parent"
-            android:contentDescription="@string/scrollview_content_description"
             android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
+
+        </ListView>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

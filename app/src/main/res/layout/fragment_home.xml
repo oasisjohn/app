@@ -6,7 +6,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue3"
+    android:background="@color/back"
     android:fitsSystemWindows="true"
     android:textAlignment="center"
     tools:context=".HomeFragment"
@@ -74,12 +74,13 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="81dp"
                 android:layout_marginBottom="20dp"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/graduate"
                 android:gravity="center"
                 android:text="DASHBOARD"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#43B1FB"
-                android:textSize="19sp" />
+                android:textSize="19sp"
+                android:textStyle="bold"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
@@ -91,10 +92,11 @@
         android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="100dp"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/graduate"
         android:gravity="center_horizontal"
         android:text="ZONE 2 DISTICT 11  BARANGAY 20"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="@+id/logo"
         app:layout_constraintTop_toTopOf="parent" />
@@ -148,6 +150,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="25dp"
                     android:gravity="center"
+                    android:fontFamily="@font/graduate"
                     android:text="REQUEST DOCUMENTS"
                     android:textStyle="bold" />
 
@@ -187,6 +190,7 @@
                     android:layout_alignParentRight="true"
                     android:gravity="center"
                     android:text="REQUEST ASSISTANCE"
+                    android:fontFamily="@font/graduate"
                     android:textStyle="bold" />
 
             </RelativeLayout>
@@ -225,6 +229,7 @@
                     android:layout_alignParentRight="true"
                     android:gravity="center"
                     android:text="ANNOUNCEMENT"
+                    android:fontFamily="@font/graduate"
                     android:textStyle="bold" />
 
             </RelativeLayout>

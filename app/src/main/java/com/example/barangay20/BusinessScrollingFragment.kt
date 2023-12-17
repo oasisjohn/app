@@ -26,10 +26,13 @@ class BusinessScrollingFragment : Fragment() {
 
         // Set the positive button
         alertDialogBuilder.setPositiveButton("OK") { dialog, which ->
-            val fragmentTransaction = requireActivity().supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragment_container, RequestFragment())
-            fragmentTransaction.addToBackStack(null)  // Optional: Add to back stack if you want to navigate back
-            fragmentTransaction.commit()
+            // Navigate to the next page
+            val registerIntent = Intent(requireContext(), RequestFragment::class.java)
+            startActivity(registerIntent)
+
+            // Finish this fragment to prevent going back to it
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+
             dialog.dismiss()
         }
 

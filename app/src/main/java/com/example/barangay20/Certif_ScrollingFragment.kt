@@ -1,6 +1,8 @@
 package com.example.barangay20
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +21,30 @@ import org.json.JSONObject
 
 
 class Certif_ScrollingFragment : Fragment() {
+    private fun showSuccessAlertDialog() {
+        val alertDialogBuilder = AlertDialog.Builder(requireContext())
+
+        // Set the title and message for success
+        alertDialogBuilder.setTitle("Success")
+        alertDialogBuilder.setMessage("Data added successfully!")
+
+        // Set the positive button
+        alertDialogBuilder.setPositiveButton("OK") { dialog, which ->
+            // Navigate to the next page
+            val registerIntent = Intent(requireContext(), RequestFragment::class.java)
+            startActivity(registerIntent)
+
+            // Finish this fragment to prevent going back to it
+            requireActivity().supportFragmentManager.beginTransaction().remove(this).commit()
+
+
+            dialog.dismiss()
+        }
+
+        // Create and show the AlertDialog
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -69,6 +95,7 @@ class Certif_ScrollingFragment : Fragment() {
 
                     if (status) {
                         Toast.makeText(requireContext(), "Added successfully: $message", Toast.LENGTH_SHORT).show()
+                        showSuccessAlertDialog()
                     } else {
                         Toast.makeText(requireContext(), "Failed to add: $message", Toast.LENGTH_SHORT).show()
                     }

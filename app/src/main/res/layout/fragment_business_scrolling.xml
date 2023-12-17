@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backg"
+    android:background="@color/back"
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
@@ -44,12 +44,13 @@
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginBottom="19dp"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/graduate"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:text="Business Clearance"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#43B1FB"
-                android:textSize="30sp" />
+                android:textSize="25sp" />
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -116,7 +117,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/phone">
+                app:startIconDrawable="@drawable/yrsres">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textBusinessYrs"
@@ -134,7 +135,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:layout_marginBottom="5dp"
-                app:startIconDrawable="@drawable/purpose">
+                app:startIconDrawable="@drawable/phone">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textBusinessContact"
@@ -142,6 +143,25 @@
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
                     android:hint="Contact No." />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/businessemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="5dp"
+                app:startIconDrawable="@drawable/email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textBusinessEmail"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
