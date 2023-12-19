@@ -54,7 +54,6 @@ class announcement : Fragment() {
                 headlineTextView.text = currentAnnouncement?.headline
 
                 listItemView.setOnClickListener {
-                    // Handle click event, show all information in a dialog
                     showAllInformation(currentAnnouncement)
                 }
 
