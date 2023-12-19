@@ -31,6 +31,7 @@ class LoginActivity : AppCompatActivity() {
          password = findViewById(R.id.text_input_password)
         val signupBtn =findViewById<TextView>(R.id.tv_click)
         val loginBtn = findViewById<Button>(R.id.login)
+
         signupBtn.setOnClickListener {
           val registerIntent =  Intent(this, RegisterActivity::class.java)
             startActivity(registerIntent)
@@ -40,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
 
             val post_user = username.text.toString()
             val post_password = password.text.toString()
-            val apiUrl = "https://barangaymngmt.bsisakalam.com/login.php"
+            val apiUrl = "https://brgymngmt.bsisakalam.com/api/login_validation.php"
             val requestQueue = Volley.newRequestQueue(this)
 
             val params = mapOf(
